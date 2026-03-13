@@ -1,0 +1,99 @@
+/* ---- Reset básico ---- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f5;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #18181b;
+}
+
+/* ---- Tarjeta del formulario ---- */
+form {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  padding: 2rem 2.25rem;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ---- Inputs ---- */
+input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d4d4d8;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #a1a1aa;
+}
+
+/* ---- Botón principal ---- */
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background: #18181b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #3f3f46;
+}
+
+/* ---- Botones secundarios (registrarse / olvidé contraseña) ---- */
+button:not([type="submit"]) {
+  width: 100%;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid #e4e4e7;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #71717a;
+  cursor: pointer;
+}
+
+.links {
+    display: flex;        /* pone los hijos uno al lado del otro */
+    gap: 8px; 
+                /* espacio entre los dos botones */
+}
+
+.links button {
+    flex: 1;              /* cada botón ocupa la mitad del espacio disponible */
+    font-size: 12px;      /* texto más chico */
+    padding: 8px;
+}
+
+button:not([type="submit"]) a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button:not([type="submit"]):hover {
+  background: #f4f4f5;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+    <form action="login">
+        <h1>Iniciar sesión</h1>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button type="submit">Iniciar sesión</button>
+        
+        <div class="links">
+        <button><a href="registro.html">Registrarse</a></button>
+        <button><a href="recuperar_contrasena.html">Olvidé mi contraseña</a></button>  <!-- Aquí puedes agregar un enlace para registrarse o recuperar la contraseña --> 
+        </div>
+    </form>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const predefinedUsername = 'admin';
+            const predefinedPassword = '123';
+
+            if (username === predefinedUsername && password === predefinedPassword) {
+                alert('Inicio de sesión exitoso');
+            } else {
+                alert('Usuario o contraseña incorrectos');
+            }
+        });     
+    </script>
+</body>
